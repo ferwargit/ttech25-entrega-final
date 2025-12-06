@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 
 import authRoutes from "./src/routes/auth.routes.js";
 
+import { verifyToken } from "./src/middlewares/auth.middleware.js";
+
 dotenv.config();
 
 const app = express();
@@ -17,6 +19,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.json({ message: "API funcionando correctamente" });
+});
+
+// Ruta protegida de prueba
+app.get("/ruta-protegida", verifyToken, (req, res) => {
+  res.json({
+    message: "¡Tienes acceso!",
+    user: req.user,
+  });
 });
 
 // Rutas de Autenticación (Prefijo: /auth)
