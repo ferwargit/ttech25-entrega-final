@@ -1,5 +1,9 @@
 # Backend API - Gestión de Productos (E-commerce)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://ttech25-entrega-final.vercel.app/)
+
+> **Demo en vivo:** [https://ttech25-entrega-final.vercel.app/](https://ttech25-entrega-final.vercel.app/)
+
 Una API RESTful robusta y escalable desarrollada con Node.js y Express para la gestión de productos de un e-commerce. Este proyecto implementa una arquitectura MVC, conexión a base de datos en la nube (Firebase Firestore) y seguridad mediante autenticación JWT.
 
 Este proyecto representa la **Entrega Final** para el curso de "Backend con Node.js" de Talento Tech 2025, integrando todos los conocimientos adquiridos sobre servidores web, bases de datos NoSQL y buenas prácticas de ingeniería de software.
@@ -49,7 +53,7 @@ Sigue estos pasos para levantar el proyecto en tu entorno local:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/ferwargit/ttech25-entrega-final
     cd ttech25-entrega-final
     ```
 
@@ -142,12 +146,15 @@ src/
 
 ## Despliegue
 
-Este proyecto está configurado para ser desplegado en plataformas Serverless como **Vercel**.
-Incluye el archivo `vercel.json` y la adaptación en `index.js` para exportar la aplicación correctamente.
+Este proyecto ha sido desplegado exitosamente utilizando **Vercel**, aprovechando su integración nativa con proyectos Node.js y GitHub.
+
+*   **URL de Producción:** [https://ttech25-entrega-final.vercel.app/](https://ttech25-entrega-final.vercel.app/)
+
+El despliegue es automático (CD) cada vez que se realiza un push a la rama principal (`main`) del repositorio.
 
 ## Autor
 
-*   **Fernando Warno** - *Desarrollador Full Stack en formación*
+*   **Fernando Warno** - *Desarrollador Full Stack*
 
 ## Licencia
 
