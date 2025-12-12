@@ -19,10 +19,15 @@ export const ProductService = {
       throw new Error("El nombre y el precio son obligatorios");
     }
 
-    // Asegurar que el precio sea un número y categorías un array
+    const priceNumber = Number(data.price);
+    if (isNaN(priceNumber)) {
+      throw new Error("El precio debe ser un número válido");
+    }
+
+    // Aseguramos que el precio sea un número y categorías un array
     const cleanData = {
       name: data.name,
-      price: Number(data.price),
+      price: priceNumber,
       categories: Array.isArray(data.categories) ? data.categories : [],
     };
 
